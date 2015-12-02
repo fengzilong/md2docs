@@ -1,0 +1,33 @@
+{
+  "name": "md2docs",
+  "description": "markdown to docs",
+  "main": "index.js",
+  "authors": [
+    "feng_zilong@163.com"
+  ],
+  "license": "MIT",
+  "keywords": [
+    "markdown",
+    "doc"
+  ],
+  "homepage": "https://github.com/fengzilong/md2docs",
+  "moduleType": [
+    "globals"
+  ],
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "static/vendor",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+	"jquery": "~2.1.4",
+    "jquery-pjax": "~1.9.6",
+    "perfect-scrollbar": "~0.6.7",
+    "normalize-css": "~3.0.3",
+    "github-markdown-css": "~2.1.1",
+    "highlightjs": "~8.9.1"
+  }
+}

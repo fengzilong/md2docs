@@ -1,0 +1,33 @@
+{
+  "name": "md2docs",
+  "version": "0.0.1",
+  "description": "markdown to docs",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "dependencies": {
+    "glob": "^6.0.1",
+    "fs-jetpack": "^0.7.0",
+    "lodash": "^3.10.1",
+    "marked": "^0.3.5"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fengzilong/md2docs.git"
+  },
+  "keywords": [
+    "markdown",
+    "doc"
+  ],
+  "author": "feng_zilong@163.com",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/fengzilong/md2docs/issues"
+  },
+  "homepage": "https://github.com/fengzilong/md2docs#readme"
+}
