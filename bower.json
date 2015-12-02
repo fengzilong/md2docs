@@ -23,7 +23,7 @@
     "tests"
   ],
   "dependencies": {
-	"jquery": "~2.1.4",
+    "jquery": "~2.1.4",
     "jquery-pjax": "~1.9.6",
     "perfect-scrollbar": "~0.6.7",
     "normalize-css": "~3.0.3",
