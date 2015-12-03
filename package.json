@@ -7,8 +7,9 @@
     "doc": "docs"
   },
   "dependencies": {
-    "glob": "^6.0.1",
+    "art-template": "^3.0.3",
     "fs-jetpack": "^0.7.0",
+    "glob": "^6.0.1",
     "lodash": "^3.10.1",
     "marked": "^0.3.5"
   },

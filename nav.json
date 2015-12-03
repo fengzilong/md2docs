@@ -1,0 +1,51 @@
+[
+  {
+    "type": "folder",
+    "text": "1",
+    "children": [
+      {
+        "type": "folder",
+        "text": "2",
+        "children": [
+          {
+            "type": "folder",
+            "text": "3",
+            "children": [
+              {
+                "type": "file",
+                "text": "y.md",
+                "link": "/1/2/3/y.md"
+              }
+            ]
+          },
+          {
+            "type": "file",
+            "text": "x.md",
+            "link": "/1/2/x.md"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "type": "file",
+    "text": "ajax.md",
+    "link": "/ajax.md"
+  },
+  {
+    "type": "folder",
+    "text": "组件文档",
+    "children": [
+      {
+        "type": "file",
+        "text": "文档1.md",
+        "link": "/组件文档/文档1.md"
+      },
+      {
+        "type": "file",
+        "text": "文档2.md",
+        "link": "/组件文档/文档2.md"
+      }
+    ]
+  }
+]

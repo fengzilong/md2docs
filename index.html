@@ -3,11 +3,11 @@
     <head>
         <meta charset="utf-8">
         <title>文档</title>
-        <link rel="stylesheet" href="static/vendor/normalize-css/normalize.css" media="screen" title="no title" charset="utf-8">
-        <link rel="stylesheet" href="static/font/iconfont/iconfont.css" media="screen" title="no title" charset="utf-8">
-	    <link rel="stylesheet" href="static/vendor/perfect-scrollbar/css/perfect-scrollbar.min.css" type="" media=""/>
-	    <link rel="stylesheet" href="static/vendor/github-markdown-css/github-markdown.css" type="" media=""/>
-	    <link rel="stylesheet" href="static/vendor/highlightjs/styles/solarized_light.css" type="" media=""/>
+        <link rel="stylesheet" href="/static/vendor/normalize-css/normalize.css" media="screen" title="no title" charset="utf-8">
+        <link rel="stylesheet" href="/static/font/iconfont/iconfont.css" media="screen" title="no title" charset="utf-8">
+	    <link rel="stylesheet" href="/static/vendor/perfect-scrollbar/css/perfect-scrollbar.min.css" type="" media=""/>
+	    <link rel="stylesheet" href="/static/vendor/github-markdown-css/github-markdown.css" type="" media=""/>
+	    <link rel="stylesheet" href="/static/vendor/highlightjs/styles/solarized_light.css" type="" media=""/>
     </head>
     <body>
         <style media="screen">
@@ -101,73 +101,13 @@
 				background-color: #F0F2FA;
 				margin: 0 5px;
             }
+
+            .nav-tree-text a {
+	            margin-left: 5px;
+            }
         </style>
         <nav class="nav J_nav">
-            <ul class="nav-tree">
-                <li class="nav-tree-folder J_folder">
-                    <div class="nav-tree-text J_text">
-                        <i class="iconfont arrow">&#xe602;</i>
-                        <i class="iconfont">&#xe601;</i>
-                        <a href="javascript:;">我是文件夹</a>
-                    </div>
-
-                    <ul class="nav-tree">
-                        <li class="nav-tree-file">
-                            <div class="nav-tree-text">
-                                <i class="iconfont arrow">&#xe602;</i>
-                                <i class="iconfont">&#xe600;</i>
-                                <a href="ajax.md">我是文件1</a>
-                            </div>
-                        </li>
-                        <li class="nav-tree-file">
-                            <div class="nav-tree-text">
-                                <i class="iconfont arrow">&#xe602;</i>
-                                <i class="iconfont">&#xe600;</i>
-                                <a href="javascript:;">我是文件2</a>
-                            </div>
-                        </li>
-
-                        <li class="nav-tree-folder J_folder">
-                            <div class="nav-tree-text J_text">
-                                <i class="iconfont arrow">&#xe602;</i>
-                                <i class="iconfont">&#xe601;</i>
-                                <a href="javascript:;">我是文件夹</a>
-                            </div>
-                            <ul class="nav-tree">
-                                <li class="nav-tree-file">
-                                    <div class="nav-tree-text">
-                                        <i class="iconfont arrow">&#xe602;</i>
-                                        <i class="iconfont">&#xe600;</i>
-                                        <a href="javascript:;">我是文件1</a>
-                                    </div>
-                                </li>
-                                <li class="nav-tree-file">
-                                    <div class="nav-tree-text">
-                                        <i class="iconfont arrow">&#xe602;</i>
-                                        <i class="iconfont">&#xe600;</i>
-                                        <a href="javascript:;">我是文件2</a>
-                                    </div>
-                                </li>
-                            </ul>
-                        </li>
-                    </ul>
-                </li>
-
-                <li class="nav-tree-file">
-                    <div class="nav-tree-text">
-                        <i class="iconfont arrow">&#xe602;</i>
-                        <i class="iconfont">&#xe600;</i>
-                        <a href="javascript:;">我是文件1</a>
-                    </div>
-                </li>
-                <li class="nav-tree-file">
-                    <div class="nav-tree-text">
-                        <i class="iconfont arrow">&#xe602;</i>
-                        <i class="iconfont">&#xe600;</i>
-                        <a href="javascript:;">我是文件2</a>
-                    </div>
-                </li>
-            </ul>
+            {{= nav}}
         </nav>
 
         <div class="content markdown-body" id="content">
@@ -177,7 +117,7 @@
         <script src="/static/vendor/jquery/dist/jquery.min.js" charset="utf-8"></script>
         <script type="text/javascript" src="/static/vendor/jquery-pjax/jquery.pjax.js"></script>
         <script type="text/javascript" src="/static/vendor/perfect-scrollbar/js/min/perfect-scrollbar.jquery.min.js"></script>
-        <script type="text/javascript" src="static/vendor/highlightjs/highlight.pack.min.js"></script>
+        <script type="text/javascript" src="/static/vendor/highlightjs/highlight.pack.min.js"></script>
 	    <script>hljs.initHighlightingOnLoad();</script>
         
         <script src="/static/app/main.js" charset="utf-8"></script>
@@ -187,8 +127,8 @@
                 $(this).parents('.J_folder').eq( 0 ).toggleClass('open');
             });
 
-            $(document).pjax('a', '#content', {
-	            
+            $(document).pjax('a', {
+	            container: '#content'
             });
 
             $(document).on('pjax:complete', function() {
@@ -196,6 +136,10 @@
 					hljs.highlightBlock(block);
 				});
 			});
+
+			if( location.pathname !== '/' ){
+				$.pjax.reload('#content');
+			}
 
             $('#content').perfectScrollbar();
         </script>
