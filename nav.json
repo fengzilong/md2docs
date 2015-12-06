@@ -33,6 +33,16 @@
     "link": "/ajax.md"
   },
   {
+    "type": "file",
+    "text": "ajax1.md",
+    "link": "/ajax1.md"
+  },
+  {
+    "type": "file",
+    "text": "ajax2.md",
+    "link": "/ajax2.md"
+  },
+  {
     "type": "folder",
     "text": "组件文档",
     "children": [

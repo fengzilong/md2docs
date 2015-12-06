@@ -1,0 +1,92 @@
+body {
+	font-size: 16px;
+}
+.nav {
+	position: absolute;
+	width: 230px;
+	background-color: #3849a2;
+	color: #FAFAFA;
+	padding: 15px;
+	box-sizing: border-box;
+	height: 100%;
+	font-size: 13px;
+}
+.nav a {
+	display: inline-block;
+	color: #FAFAFA;
+	text-decoration: none;
+	height: 32px;
+	line-height: 32px;
+}
+ul, li {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+/* nav tree */
+ .nav {
+	-webkit-user-select: none;
+	user-select: none;
+}
+.nav .iconfont {
+	display: block;
+	line-height: 32px;
+	color: #FAFAFA;
+}
+.nav-tree-file .nav-tree-text .arrow {
+	color: transparent;
+}
+.nav-tree-text {
+	padding-left: 5px;
+	cursor: pointer;
+}
+.nav-tree-folder .nav-tree {
+	display: none;
+}
+.nav-tree-folder.open > .nav-tree {
+	display: block;
+}
+.nav-tree-folder.open > .nav-tree-text > .arrow {
+	-webkit-transform: rotate(90deg);
+	transform: rotate(90deg);
+}
+.nav-tree .nav-tree {
+	margin-left: 20px;
+}
+.nav-tree-text:hover {
+	background-color: #495CC4;
+	border-radius: 3px;
+}
+.nav-tree-text.active {
+	background-color: #495CC4;
+	border-radius: 3px;
+}
+/* modify */
+ .markdown-body {
+	width: -webkit-calc(100% - 230px);
+	left: 230px;
+	height: 100%;
+	position: absolute;
+	padding: 45px 55px;
+	box-sizing: border-box;
+	overflow: hidden;
+}
+.markdown-body h1, .markdown-body h2, .markdown-body h3, .markdown-body h4, .markdown-body h5 {
+	background-color: #F6F6F6;
+	border-left: solid 5px #DDD;
+	padding: 15px 20px;
+	border-radius: 5px;
+}
+.markdown-body p > code {
+	padding: 5px 7px;
+	background-color: #F0F2FA;
+	margin: 0 5px;
+}
+.nav-tree-text {
+	display: -webkit-box;
+}
+.nav-tree-text a {
+	margin-left: 5px;
+	-webkit-box-flex: 1;
+	display: block;
+}
