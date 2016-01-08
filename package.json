@@ -8,6 +8,7 @@
   },
   "dependencies": {
     "art-template": "^3.0.3",
+    "express": "^4.13.3",
     "fs-jetpack": "^0.7.0",
     "glob": "^6.0.1",
     "lodash": "^3.10.1",
