@@ -1,6 +1,7 @@
 # md2docs
-generate static docs site with markdown
 
-### screenshot
+generate static docs site from markdown files
+
+## screenshot
 
 ![screenshot](screenshot.png)
