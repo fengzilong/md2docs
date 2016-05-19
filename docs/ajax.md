@@ -1,69 +1,68 @@
-### ajax
+# ajax
 
-**属性**
+## 属性
 
-- url
+### `url`
 
-    目标地址
+目标地址
 
-- data
+### `data`
 
-    发送的数据
+发送的数据
 
-- type
+### `type`
 
-    类型，`get`或者`post`
+类型，`get`或者`post`
 
-- handleas
+### `handle-as`
 
-    默认为`json`
+默认为`json`
 
-**方法**
+## 方法
 
-- url
+### `url`
 
-    更新目标地址
-    ```js
-    tag.url('/x')
-    ```
+更新目标地址
+```js
+tag.url('/x')
+```
 
-- data
+### `data`
 
-    更新发送的数据，接收一个对象
-    ```js
-    tag.data({
-    	a: '1'
-    })
-    ```
+更新发送的数据，接收一个对象
+```js
+tag.data({
+	a: '1'
+})
+```
 
-- type
+### `type`
 
-    更新类型
-    ```js
-    tag.type('post')
-    ```
+更新类型
+```js
+tag.type( 'post' )
+```
 
-- handleAs
+### `handleAs`
 
-    更新处理方式
+更新处理方式
+```js
+tag.handleAs( 'jsonp' )
+```
 
-    ```js
-    tag.handleAs('jsonp')
-    ```
+### `send`
 
-- send
+发送，返回一个promise对象
+```js
+tag.send().then(json => {})
+```
 
-    发送，返回一个promise对象
-    ```js
-    tag.send().then(...)
-    ```
+## 事件
 
-**事件**
+### `send`
 
-- send
+### `success`
 
-- success
+### `error`
 
-- error
-
-- complete
+### `complete`

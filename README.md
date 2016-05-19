@@ -11,12 +11,12 @@ generate static docs site from markdown files
 $ md2docs -r ./path/to/docs
 
 # use your own color theme
-$ md2docs -c #DDD
+$ md2docs -c #3779E5
 
 # specify a port
 # md2docs -p 8080
 ```
 
-## screenshot
+## Screenshots
 
 ![screenshot](screenshot.png)
