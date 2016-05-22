@@ -14,7 +14,7 @@ $ md2docs -r ./path/to/docs
 $ md2docs -c #3779E5
 
 # specify a port
-# md2docs -p 8080
+$ md2docs -p 8080
 ```
 
 ## Screenshots
